@@ -24,10 +24,8 @@ def std_dev_of_lengths(L):
       or NaN if L is empty.
     """
     list_of_str = L
-    len_of_list = len(list_of_str)
-    if len_of_list == 0:
+    array_of_str = np.array([len(x) for x in list_of_str])
+    if len(array_of_str) == 0:
         return float('NaN')
     else:
-        return 0
-    
-print(std_dev_of_lengths([]))
+        return variance(array_of_str)**.5
