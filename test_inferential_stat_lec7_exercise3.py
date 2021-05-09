@@ -3,6 +3,7 @@ from inferential_stat_lec7_exercise3 import std_dev_of_lengths
 from assertpy import assert_that
 import math
 import os
+
 os.environ["OPENBLAS_NUM_THREADS"] = "1"
 import numpy as np
 
@@ -28,3 +29,11 @@ class TestClass:
         result = self.std_dev_of_length(L)
         # Then
         assert_that(result).is_equal_to(0)
+
+    def test_std_dev_of_length_for_str_various_len(self):
+        # Given
+        L = ['apples', 'oranges', 'kiwis', 'pineapples']
+        # When
+        result = self.std_dev_of_length(L)
+        # Then
+        assert_that(result).is_close_to(1.8708, 5)
