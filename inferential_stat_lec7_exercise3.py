@@ -17,9 +17,8 @@ def variance(L):
 
 def std_dev_of_lengths(L):
     """
-    L: a list of strings
-
-    returns: float, the standard deviation of the lengths of the strings,
+    :param L: a list of strings
+    :return: float, the standard deviation of the lengths of the strings,
       or NaN if L is empty.
     """
     list_of_str = L

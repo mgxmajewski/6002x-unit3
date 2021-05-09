@@ -6,7 +6,7 @@ from inferential_stat_lec7_exercise3 import std_dev_of_lengths
 os.environ["OPENBLAS_NUM_THREADS"] = "1"
 
 
-class TestClass:
+class TestClassExercise7:
 
     @pytest.fixture(autouse=True)
     def prepare_vat_service(self):
