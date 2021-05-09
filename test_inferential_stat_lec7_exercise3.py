@@ -20,3 +20,11 @@ class TestClass:
         result = self.std_dev_of_length(L)
         # Then
         assert_that(result).is_nan()
+
+    def test_std_dev_of_length_for_str_len_of_1(self):
+        # Given
+        L = ['a', 'z', 'p']
+        # When
+        result = self.std_dev_of_length(L)
+        # Then
+        assert_that(result).is_equal_to(0)
