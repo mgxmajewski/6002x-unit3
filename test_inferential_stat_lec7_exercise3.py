@@ -1,11 +1,9 @@
-import pytest
-from inferential_stat_lec7_exercise3 import std_dev_of_lengths
-from assertpy import assert_that
-import math
 import os
 
+import pytest
+from assertpy import assert_that
+from inferential_stat_lec7_exercise3 import std_dev_of_lengths
 os.environ["OPENBLAS_NUM_THREADS"] = "1"
-import numpy as np
 
 
 class TestClass:
