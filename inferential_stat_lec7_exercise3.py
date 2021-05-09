@@ -1,7 +1,19 @@
 import math
 import os
-os.environ["OPENBLAS_NUM_THREADS"] = "1"
 import numpy as np
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+
+
+def variance(L):
+    """
+   :param L: list of strings
+   :return: variance of L
+   """
+    mean = sum(L)/len(L)
+    tot = 0.0
+    for x in L:
+        tot += (x - mean)**2
+    return tot/len(L)
 
 
 def std_dev_of_lengths(L):
