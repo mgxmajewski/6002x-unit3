@@ -27,3 +27,6 @@ def std_dev_of_lengths(L):
         return float('NaN')
     else:
         return variance(array_of_str)**.5
+
+
+print(variance([10, 4, 12, 15, 20, 5])**.5/11)
