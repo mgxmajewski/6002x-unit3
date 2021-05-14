@@ -11,6 +11,16 @@ def get_mean_and_std(X):
     return mean, std
 
 
+L = [1, 1, 1, 1, 2]
+pylab.hist(L)
+pylab.show()
+factor = pylab.array(len(L)*[1])/len(L)
+print(factor)
+pylab.figure()
+pylab.hist(L, weights=factor)
+pylab.show()
+
+
 def plot_means(num_dice, num_rolls, num_bins, legend, color, style):
     means = []
     for i in range(num_rolls // num_dice):
