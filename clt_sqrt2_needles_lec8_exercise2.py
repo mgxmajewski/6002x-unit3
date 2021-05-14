@@ -1,8 +1,9 @@
 import random
 
 
-def throw_needles(num_needles):
-    """:param num_needles: number of trials
+def throw_needles_sqrt2(num_needles):
+    """
+    :param num_needles: number of trials
     simulation that estimates the value of 2–√
     in a way similar to the Buffon-Laplace
     Pi estimation shown in lecture.
@@ -18,4 +19,4 @@ def throw_needles(num_needles):
     return sqrt2
 
 
-print(throw_needles(10000000))
+print(throw_needles_sqrt2(10000000))
