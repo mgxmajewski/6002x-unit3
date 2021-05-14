@@ -32,3 +32,14 @@ def plot_means(num_dice, num_rolls, num_bins, legend, color, style):
                weights=pylab.array(len(means) * [1]) / len(means),
                hatch=style)
     return get_mean_and_std(means)
+
+
+mean, std = plot_means(1, 1000000, 19, '1 die', 'b', '*')
+print('Mean of rolling 1 die =', str(mean) + ',', 'Std =', std)
+mean, std = plot_means(50, 1000000, 19, '50 dice', 'r', '//')
+print('Mean of rolling 50 die =', str(mean) + ',', 'Std =', std)
+pylab.title('Rolling Continuous Dice')
+pylab.xlabel('Value')
+pylab.ylabel('Profitability')
+pylab.legend()
+pylab.show()
